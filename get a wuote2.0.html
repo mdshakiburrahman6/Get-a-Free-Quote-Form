@@ -21,7 +21,7 @@
 }
 .cpf .tab-btn {
   padding: 10px 18px;
-  border-radius: 8px;
+  border-radius: 50px;
   border: 0;
   cursor: pointer;
   font-weight: 600;
@@ -29,8 +29,17 @@
   color: #222;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
-.cpf .tab-btn.active { background:#0867ff; color:#fff; }
-
+.cpf .tab-btn.active { background:#0867ff; color:#fff;  }
+.cpf .tab-btn:hover{
+  padding: 10px 18px;
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  background: #0867ff;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
 /* Panel */
 .cpf .panel {
   background: #fff;
@@ -42,10 +51,10 @@
 
 /* Rows & Columns */
 .cpf .row {
-  display: flex;
+  /* display: flex;
   gap: 18px;
   flex-wrap: wrap;
-  margin-bottom: 14px;
+  margin-bottom: 14px; */
 }
 .cpf .col {
   flex: 1 1 300px;
@@ -133,47 +142,221 @@
     font-size:15px; 
 }
 
-/* Mobile */
-@media (max-width:700px) {
-  .cpf .services-block { flex-direction:column; }
-  .cpf .align-row { flex-direction:row; margin-top: -20px;}
-  .cpf .services-left { padding-bottom: 0px; }
-  .cpf .tab-btn { width:48%; }
-  .services-left{ width: 100%;}
-
-  .cpf .services-left, 
-  .cpf .services-right { 
-      flex:1 1 260px; 
-      min-width:100%; 
-      /* margin-top: -20px; */
-  }
-
-  .cpf .submit-row{
-    margin-top: 50px;
-  }
-
-  .cpf .services-right{
-
-    display: flex;
-    flex-direction: column-reverse;
-    position:static;
-    margin-top: -20px;
-  }
-
-  .cpf .additional{
-    position: static !important;
-    margin-bottom: -160px;
-  }
-  div#c-be-panel{
-    margin-top: 10px;
-  }
-  #residentialForm .align-row{
-    flex-direction: column-reverse;
-  }
-  .cpf .align-row .col { 
-    min-width:100%; 
+/* ===========================
+-------Over write CSS--------  
+===========================*/
+#commercialForm{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#commercialForm .form-top{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#commercialForm .row .col input{
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #f6f7f8;
+  box-sizing: border-box;
+  font-size:14px;
+}
+#commercialForm .services-block{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+  margin-top: 10px;
+  /* background-color: #0867ff; */
+}
+#commercialForm .services-block .services-top{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: start;
+  align-items: start;
+  /* background-color: #187d3b; */
+  width: 100%;
+  gap: 20px;
+}
+#commercialForm .services-block .services-top .services-top-left{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* background-color: #e6c9ff; */
+  gap: 5px;
+}
+#commercialForm .services-block .services-top .services-top-right{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 15px;
+  /* background-color: red; */
+}
+#commercialForm .services-block .services-top .services-top-right input{
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #f6f7f8;
+  box-sizing: border-box;
+  font-size:14px;
+}
+#commercialForm .services-block .services-bottom{
+  display: flex;
+  width: 100%;
+  /* background-color: #187d3b; */
+  gap: 20px;
+  align-items: end;
+}
+#commercialForm .services-block .services-bottom .services-bottom-left{
+  width: 50%;
+}
+#commercialForm .services-block .services-bottom .services-bottom-left .desire-sec{
+  margin-bottom: 6px;
+}
+#commercialForm .services-block .services-bottom .services-bottom-right{
+  width: 50%;
 }
 
+/* -------RESIDENTIAL STYLES------- */
+#residentialForm{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#residentialForm .form-top{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#residentialForm .row .col input{
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #f6f7f8;
+  box-sizing: border-box;
+  font-size:14px;
+}
+#residentialForm .services-block{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+#residentialForm .services-block .services-top{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+#residentialForm .services-block .services-top .services-top-left{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 5px;
+}
+#residentialForm .services-block .services-top .services-top-right{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 15px;
+}
+#residentialForm .services-block .services-top .services-top-right input{
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #f6f7f8;
+  box-sizing: border-box;
+  font-size:14px;
+}
+#residentialForm .services-block .services-bottom{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: end;
+}
+#residentialForm .services-block .services-bottom .services-bottom-left{
+  width: 50%;
+}
+#residentialForm .services-block .services-bottom .services-bottom-left .desire-sec{
+  margin-bottom: 6px;
+}
+#residentialForm .services-block .services-bottom .services-bottom-right{
+  width: 50%;
+}
+.res-content{
+  border: 1px solid #FFD973;
+  padding: 20px;
+  margin-top: 50px;
+}
+.submit-row{
+  margin-top: 20px;
+}
+
+/* Mobile */
+@media (max-width:700px) {
+    #commercialForm .services-block{
+      gap:10px;
+    }
+    #commercialForm .services-block .services-top{
+      flex-direction: column;
+      gap: 20px;
+    }
+    #commercialForm .services-block .services-top .services-top-left{
+      width: 100%;
+    }
+    #commercialForm .services-block .services-top .services-top-right{
+      width: 100%;
+    }
+    #commercialForm .services-block .services-bottom{
+      flex-direction: column;
+    }
+    #commercialForm .services-block .services-bottom .services-bottom-left{
+      width: 100%;
+    }
+     #commercialForm .services-block .services-bottom .services-bottom-left .desire-sec{
+      margin-bottom: 0px;
+    }
+    #commercialForm .services-block .services-bottom .services-bottom-right{
+      width: 100%;
+    }
+    /* -------RESIDENTIAL STYLES------- */
+    #residentialForm .services-block{
+      gap:10px;
+    }
+     #residentialForm .services-block .services-top{
+      flex-direction: column;
+      gap: 20px;
+    }
+    #residentialForm .services-block .services-top .services-top-left{
+      width: 100%;
+    }
+    #residentialForm .services-block .services-top .services-top-right{
+      width: 100%;
+    }
+    #residentialForm .services-block .services-bottom{
+      flex-direction: column;
+    }
+    #residentialForm .services-block .services-bottom .services-bottom-left{
+      width: 100%;
+    }
+    #residentialForm .services-block .services-bottom .services-bottom-left .desire-sec{
+      margin-bottom: 0px;
+    }
+    #residentialForm .services-block .services-bottom .services-bottom-right{
+      width: 100%;
+    }
+    .res-content{
+      padding: 15px;
+      margin-top: 30px;
+    }
+    .submit-row{
+      margin-top: 10px;
+    }
 }
 </style>
 
@@ -191,32 +374,38 @@
   <div class="panel" id="panel-commercial">
     <form id="commercialForm">
 
-      <div class="row">
-        <div class="col"><label class="field-label">Name *</label><input name="name" required></div>
-        <div class="col"><label class="field-label">Phone *</label><input name="phone" type="tel" required></div>
-      </div>
+      <div class="form-top">
+        <div class="row">
+          <div class="col"><label class="field-label">Name *</label><input name="name" required></div>
+        </div>
+        <div class="row">
+          <div class="col"><label class="field-label">Phone *</label><input name="phone" type="tel" required></div>
+        </div>
 
-      <div class="row">
-        <div class="col"><label class="field-label">Email *</label><input name="email" type="email" required></div>
-      </div>
+        <div class="row">
+          <div class="col"><label class="field-label">Email *</label><input name="email" type="email" required></div>
+        </div>
 
-      <div class="row">
-        <div class="col"><label class="field-label">Business Address *</label><input name="address" required></div>
-        <div class="col">
-          <label class="field-label">Category *</label>
-          <select name="category" required>
-            <option value="">Select category</option>
-            <option>Retail</option><option>Multifamily</option>
-            <option>Drive-Thru</option><option>Restaurant</option>
-          </select>
+        <div class="row">
+          <div class="col"><label class="field-label">Business Address *</label><input name="address" required></div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="field-label">Category *</label>
+            <select name="category" required>
+              <option value="">Select category</option>
+              <option>Retail</option><option>Multifamily</option>
+              <option>Drive-Thru</option><option>Restaurant</option>
+            </select>
+          </div>
         </div>
       </div>
 
       <!-- Service Block -->
       <div class="row services-block">
 
-        <div class="services-left">
-          <div>
+        <div class="services-top">
+          <div class="services-top-left">
             <label class="field-label">Services Needed *</label>
 
             <label><input type="checkbox" name="services[]" value="Sidewalks"> Sidewalks</label>
@@ -224,26 +413,27 @@
             <label><input type="checkbox" id="c-be" name="services[]" value="Building Exterior"> Building Exterior</label>
             <label><input type="checkbox" id="c-dump" name="services[]" value="Dumpster"> Dumpster</label>
             <label><input type="checkbox" name="services[]" value="Window Cleaning"> Window Cleaning (≤3 stories)</label>
-
           </div>
 
-          <div class="services-right" style="position: relative;">
+          <div class="services-top-right">
             <div id="c-be-panel" class="hidden">
-                <label class="field-label">How many stories?</label>
-                <input name="stories" type="number" min="1">
+              <label class="field-label">How many stories?</label>
+              <input name="stories" type="number" min="1">
             </div>
 
-            <div id="c-dump-panel" class="hidden" style="margin-top: 8px;">
-                <label class="field-label">Number of Dumpsters</label>
-                <input name="dumpsters" type="number" min="1">
+            <div id="c-dump-panel" class="hidden">
+              <label class="field-label">Number of Dumpsters</label>
+              <input name="dumpsters" type="number" min="1">
             </div>
+          </div>
+
+          
         </div>
 
-        
-
-          <div class="align-row">
-            <div class="col">
-              <label class="field-label" style="margin-top: 26px;">Desired Frequency *</label>
+        <div class="services-bottom">
+          <div class="services-bottom-left">
+            <div class="col desire-sec">
+              <label class="field-label">Desired Frequency *</label>
               <select name="frequency" required>
                 <option value="">Select</option>
                 <option>One-Time</option><option>Bi-Weekly</option>
@@ -251,16 +441,17 @@
               </select>
             </div>
           </div>
-
-          <div class="col additional" style="position:absolute; right:0; top:165px; width:100%;">
-            <label class="field-label">Additional Details</label>
-            <textarea name="details"></textarea>
+          <div class="services-bottom-right">
+            <div class="col">
+              <label class="field-label">Additional Details</label>
+              <textarea name="details"></textarea>
+            </div>
           </div>
         </div>
 
       </div>
 
-      <div class="submit-row" style="margin-top: -30px;">
+      <div class="submit-row">
         <button class="btn" type="submit">Submit Commercial Quote</button>
       </div>
 
@@ -275,23 +466,28 @@
 
         <form id="residentialForm">
 
-            <div class="row">
-                <div class="col"><label class="field-label">Name *</label><input name="name" required></div>
-                <div class="col"><label class="field-label">Phone *</label><input name="phone" type="tel" required></div>
-            </div>
+            <div class="form-top">
+                <div class="row">
+                  <div class="col"><label class="field-label">Name *</label><input name="name" required></div>
+                </div>
+                <div class="row">
+                    <div class="col"><label class="field-label">Phone *</label><input name="phone" type="tel" required></div>
+                </div>
 
-            <div class="row">
-                <div class="col"><label class="field-label">Email *</label><input name="email" type="email" required></div>
-            </div>
+                <div class="row">
+                    <div class="col"><label class="field-label">Email *</label><input name="email" type="email" required></div>
+                </div>
 
-            <div class="row">
-                <div class="col"><label class="field-label">Address *</label><input name="address" required></div>
+                <div class="row">
+                    <div class="col"><label class="field-label">Address *</label><input name="address" required></div>
+                </div>
             </div>
 
             <!-- FIXED SERVICE BLOCK -->
-            <div class="row services-block" style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="row services-block">
 
-                <div class="services-left">
+                <div class="services-top">
+                  <div class="services-top-left">
                     <label class="field-label">Services *</label>
 
                     <label><input type="checkbox" name="services[]" value="Sidewalks"> Sidewalks</label>
@@ -301,51 +497,57 @@
                     <label><input type="checkbox" id="r-be" name="services[]" value="Building Exterior"> Building Exterior</label>
 
                     <label><input type="checkbox" name="services[]" value="Window Cleaning"> Window Cleaning</label>
-                </div>
+                  </div>
 
-                <div class="services-right">
-                <div id="r-be-panel" class="hidden">
-                    <label class="field-label">How many stories?</label>
-                    <input name="stories" type="number" min="1">
+                  <div class="services-top-right">
+                    <div id="r-be-panel" class="hidden">
+                        <label class="field-label">How many stories?</label>
+                        <input name="stories" type="number" min="1">
 
-                    <label class="field-label" style="margin-top:12px;">Square Footage (SF)</label>
-                    <input name="square_feet" type="number" min="0">
+                        <label class="field-label" style="margin-top:12px;">Square Footage (SF)</label>
+                        <input name="square_feet" type="number" min="0">
+                    </div>
+                  </div>
                 </div>
+                <!-- Service Bottom -->
+                <div class="services-bottom">
+                  <div class="services-bottom-left">
+                      <div class="col desire-sec">
+                        <label class="field-label">Desired Frequency *</label>
+                        <select name="frequency" required>
+                            <option value="">Select</option>
+                            <option>One-Time</option><option>Bi-Weekly</option>
+                            <option>Monthly</option><option>Quarterly</option>
+                        </select>
+                      </div>
+                  </div>
+                  <div class="services-bottom-right">
+                          <div class="col">
+                            <label class="field-label">Additional Details</label>
+                            <textarea name="details"></textarea>
+                        </div>
+                      </div>
                 </div>
 
             </div>
 
-            <div class="align-row" style="display: flex; justify-content: space-between; align-items: end; margin-top: 40px;">
-                <div class="col">
-                <label class="field-label">Desired Frequency *</label>
-                <select name="frequency" required>
-                    <option value="">Select</option>
-                    <option>One-Time</option><option>Bi-Weekly</option>
-                    <option>Monthly</option><option>Quarterly</option>
-                </select>
-                </div>
 
-                <div class="col" style="margin-top: -90px; padding-bottom:20px ;">
-                <label class="field-label">Additional Details</label>
-                <textarea style="margin-bottom:-27px;" name="details"></textarea>
-                </div>
-            </div>
 
-            <div class="submit-row" style="margin-top: 30px;">
-                <button class="btn" type="submit">Submit Residential Quote</button>
-            </div>
+              <div class="submit-row">
+                  <button class="btn" type="submit">Submit Residential Quote</button>
+              </div>
 
-            <div class="success hidden" id="rSuccess">
-                Your residential quote request has been sent successfully.
-            </div>
+              <div class="success hidden" id="rSuccess">
+                  Your residential quote request has been sent successfully.
+              </div>
 
         </form>
 
-        <div style="border:2px solid #e6c9ff; padding:14px; border-radius:6px; margin-top:20px; color:#111;">
-        <p>We provide a subscription model for Windows and Pressure Washing.</p>
-        <p>Our quarterly window cleaning subscription allows us to apply a protective coat which protects your windows from dirt and water spots. If your windows get dirty prior to the quarterly appointment, we will come out for free to fix the dirty window.</p>
-        <p>What happens in the winter? Our annual subscription includes three exterior cleans per year and one interior window cleaning.</p>
-        <p>On average, our subscriptions save you 12% per year.</p>
+        <div class="res-content">
+          <p>We provide a subscription model for Windows and Pressure Washing.</p>
+          <p>Our quarterly window cleaning subscription allows us to apply a protective coat which protects your windows from dirt and water spots. If your windows get dirty prior to the quarterly appointment, we will come out for free to fix the dirty window.</p>
+          <p>What happens in the winter? Our annual subscription includes three exterior cleans per year and one interior window cleaning.</p>
+          <p>On average, our subscriptions save you 12% per year.</p>
         </div>
 
     </div>
