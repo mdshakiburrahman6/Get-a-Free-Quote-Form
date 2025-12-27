@@ -1,9 +1,11 @@
 <?php
 /**
  * Plugin Name: Get A Quote Form 
+ * Plugin URI: https://github.com/mdshakiburrahman6/Get-a-Free-Quote-Form
  * Description: [custom_quote_forms] use it for Commercial & Residential Quote Forms with AJAX
  * Version: 1.0.0
  * Author: Md Shakibur Rahman
+ * Author URI: https://github.com/mdshakiburrahman6
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
