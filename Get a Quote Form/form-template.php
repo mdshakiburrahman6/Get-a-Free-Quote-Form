@@ -297,8 +297,82 @@
   margin-top: 20px;
 }
 
+
+/* -------CANYONS STYLES------- */
+#canyonsForm{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#canyonsForm .form-top{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#canyonsForm .row .col input{
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #f6f7f8;
+  box-sizing: border-box;
+  font-size:14px;
+}
+#canyonsForm .services-block{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+#canyonsForm .services-block .services-top{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+#canyonsForm .services-block .services-top .services-top-left{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 5px;
+}
+#canyonsForm .services-block .services-top .services-top-right{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 15px;
+}
+#canyonsForm .services-block .services-top .services-top-right input{
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #f6f7f8;
+  box-sizing: border-box;
+  font-size:14px;
+}
+#canyonsForm .services-block .services-bottom{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: end;
+}
+#canyonsForm .services-block .services-bottom .services-bottom-left{
+  width: 50%;
+}
+#canyonsForm .services-block .services-bottom .services-bottom-left .desire-sec{
+  margin-bottom: 6px;
+}
+#canyonsForm .services-block .services-bottom .services-bottom-right{
+  width: 50%;
+}
+
+
 /* Mobile */
 @media (max-width:700px) {
+    .cpf .tabs {
+      flex-direction: column;
+    }
+  /* ----------------------- */
     #commercialForm .services-block{
       gap:10px;
     }
@@ -350,6 +424,32 @@
     #residentialForm .services-block .services-bottom .services-bottom-right{
       width: 100%;
     }
+        /* -------CANYONS STYLES------- */
+    #canyonsForm .services-block{
+      gap:10px;
+    }
+     #canyonsForm .services-block .services-top{
+      flex-direction: column;
+      gap: 20px;
+    }
+    #canyonsForm .services-block .services-top .services-top-left{
+      width: 100%;
+    }
+    #canyonsForm .services-block .services-top .services-top-right{
+      width: 100%;
+    }
+    #canyonsForm .services-block .services-bottom{
+      flex-direction: column;
+    }
+    #canyonsForm .services-block .services-bottom .services-bottom-left{
+      width: 100%;
+    }
+    #canyonsForm .services-block .services-bottom .services-bottom-left .desire-sec{
+      margin-bottom: 0px;
+    }
+    #canyonsForm .services-block .services-bottom .services-bottom-right{
+      width: 100%;
+    }
     .res-content{
       padding: 15px;
       margin-top: 30px;
@@ -366,6 +466,7 @@
   <div class="tabs">
     <button class="tab-btn active" data-panel="commercial">Commercial Quote</button>
     <button class="tab-btn" data-panel="residential">Residential Quote</button>
+    <button class="tab-btn" data-panel="canyons">The Canyons</button>
   </div>
 
   <!-- ========================= -->
@@ -553,12 +654,123 @@
                 </p>
             </section>
 
-            <section class="canyons-discount">
-                <h5>Do You Live in The Canyons?</h5>
+            <section class="owners-section">
+                <h5>Our Owners</h5>
                 <p>
-                    Live in The Canyons? Amazing! We’re your neighbors.
-                    We want everyone in our community to enjoy a spotless home, so we’re proud to offer
-                    <strong>15% off</strong> to all residents of The Canyons.
+                    We personally answer every call and email, create every quote, and meet every customer.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Chaz Schmidt</strong> – Owner & Operator. You’ll see Chaz on nearly every job.
+                    </li>
+                    <li>
+                        <strong>Isabela Schmidt</strong> – Client Support. When Chaz is on-site, Isabela responds to all
+                        inquiries to keep our process smooth and hassle-free.
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+        <div>
+           
+
+        </div>
+
+    </div>
+
+
+  <!-- ========================= -->
+  <!-- CANYONS PANEL -->
+  <!-- ========================= -->
+    <div class="panel hidden" id="panel-canyons">
+
+        <form id="canyonsForm">
+
+            <div class="form-top">
+                <div class="row">
+                  <div class="col"><label class="field-label">Name *</label><input name="name" required></div>
+                </div>
+                <div class="row">
+                    <div class="col"><label class="field-label">Phone *</label><input name="phone" type="tel" required></div>
+                </div>
+
+                <div class="row">
+                    <div class="col"><label class="field-label">Email *</label><input name="email" type="email" required></div>
+                </div>
+
+                <div class="row">
+                    <div class="col"><label class="field-label">Address *</label><input name="address" required></div>
+                </div>
+            </div>
+
+            <!-- FIXED SERVICE BLOCK -->
+            <div class="row services-block">
+
+                <div class="services-top">
+                  <div class="services-top-left">
+                    <label class="field-label">Services *</label>
+
+                    <label><input type="checkbox" name="services[]" value="Sidewalks"> Sidewalks</label>
+                    <label><input type="checkbox" name="services[]" value="Driveway"> Driveway</label>
+                    <label><input type="checkbox" name="services[]" value="Patio"> Patio</label>
+
+                    <label><input type="checkbox" id="can-be" name="services[]" value="Building Exterior"> Building Exterior</label>
+
+                    <label><input type="checkbox" name="services[]" value="Window Cleaning"> Window Cleaning</label>
+                  </div>
+
+                  <div class="services-top-right">
+                    <div id="can-be-panel" class="hidden">
+                        <label class="field-label">How many stories?</label>
+                        <input name="stories" type="number" min="1">
+
+                        <label class="field-label" style="margin-top:12px;">Square Footage (SF)</label>
+                        <input name="square_feet" type="number" min="0">
+                    </div>
+                  </div>
+                </div>
+                <!-- Service Bottom -->
+                <div class="services-bottom">
+                  <div class="services-bottom-left">
+                      <div class="col desire-sec">
+                        <label class="field-label">Desired Frequency *</label>
+                        <select name="frequency" required>
+                            <option value="">Select</option>
+                            <option>One-Time</option><option>Bi-Weekly</option>
+                            <option>Monthly</option><option>Quarterly</option>
+                        </select>
+                      </div>
+                  </div>
+                  <div class="services-bottom-right">
+                          <div class="col">
+                            <label class="field-label">Additional Details</label>
+                            <textarea name="details"></textarea>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+
+
+
+              <div class="submit-row">
+                  <button class="btn" type="submit">Submit Residential Quote</button>
+              </div>
+
+              <div class="success hidden" id="canSuccess">
+                Your Canyons quote request has been sent successfully.
+              </div>
+
+        </form>
+
+
+        <div class="res-content">
+            <section class="quote-info">
+                <p>
+                    We work hard to provide your quote as quickly as possible and are usually able to send one within the hour.
+                    Please note that quotes may be adjusted if additional grease stains, oil spills, or other unexpected
+                    specialized cleaning requirements are discovered.
                 </p>
             </section>
 
@@ -589,14 +801,40 @@
 </div>
 
 <script>
-/* ========= TAB SWITCH ========= */
-document.querySelectorAll('.cpf .tab-btn').forEach(btn => {
-  btn.addEventListener('click', function(){
-    document.querySelectorAll('.cpf .tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.cpf .panel').forEach(p => p.classList.add('hidden'));
-    btn.classList.add('active');
-    document.getElementById('panel-' + btn.dataset.panel).classList.remove('hidden');
+/* ========= TAB SWITCH WITH URL HASH ========= */
+const tabs = document.querySelectorAll('.cpf .tab-btn');
+const panels = document.querySelectorAll('.cpf .panel');
+
+function activateTab(panelName, updateHash = true) {
+  tabs.forEach(btn => btn.classList.remove('active'));
+  panels.forEach(p => p.classList.add('hidden'));
+
+  const activeBtn = document.querySelector(`.cpf .tab-btn[data-panel="${panelName}"]`);
+  const activePanel = document.getElementById('panel-' + panelName);
+
+  if (activeBtn && activePanel) {
+    activeBtn.classList.add('active');
+    activePanel.classList.remove('hidden');
+
+    if (updateHash) {
+      window.location.hash = panelName;
+    }
+  }
+}
+
+/* Click handling */
+tabs.forEach(btn => {
+  btn.addEventListener('click', function () {
+    activateTab(this.dataset.panel);
   });
+});
+
+/* Load tab from URL hash */
+window.addEventListener('load', function () {
+  const hash = window.location.hash.replace('#', '');
+  if (hash && document.getElementById('panel-' + hash)) {
+    activateTab(hash, false);
+  }
 });
 
 /* ========= CONDITIONAL FIELDS ========= */
@@ -609,8 +847,18 @@ const cDumpPanel = document.getElementById("c-dump-panel");
 if (cDump) cDump.addEventListener('change', ()=> cDumpPanel.classList.toggle('hidden', !cDump.checked));
 
 const rBE = document.getElementById("r-be");
-const rBEpanel = document.getElementById("r-be-panel");
+const rBEpanel = document.getElementById("r-be-panel")
 if (rBE) rBE.addEventListener('change', ()=> rBEpanel.classList.toggle('hidden', !rBE.checked));
+
+const canBE = document.getElementById("can-be");
+const canBEpanel = document.getElementById("can-be-panel");
+
+if (canBE) {
+  canBE.addEventListener('change', () => {
+    canBEpanel.classList.toggle('hidden', !canBE.checked);
+  });
+}
+
 
 /* ========= AJAX SUBMISSION ========= */
 function submitForm(formId, successBoxId, subject){
@@ -622,7 +870,7 @@ function submitForm(formId, successBoxId, subject){
 
     let data = new FormData(form);
     data.append("action", "send_custom_form");
-    // data.append("email_to", "mdshakiburrahman448@gmail.com");
+    //data.append("email_to", "mdshakiburrahman448@gmail.com");
     data.append("email_to", "<?php echo get_option('admin_email'); ?>");
     data.append("subject", subject);
 
@@ -646,6 +894,7 @@ function submitForm(formId, successBoxId, subject){
 
 submitForm("commercialForm", "cSuccess", "New Commercial Quote Request");
 submitForm("residentialForm", "rSuccess", "New Residential Quote Request");
+submitForm("canyonsForm", "canSuccess", "New Canyons Quote Request");
 </script>
 
 <!-- ========================= -->
